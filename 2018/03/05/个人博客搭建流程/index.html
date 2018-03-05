@@ -156,7 +156,20 @@
   </header>
 
   <section class="post">
-    
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><em>　　</em>在数据汹涌的当今时代，作为一只🐒，有一个属于自己的地方，可以让你随便写点什么，或者记点什么，便是件很令人愉快的事情；<br><em>　　</em>简单容易的第三方类博客平台由于自我的局限性，虽为主流，却不是主导。于是乎自己搭建博客的方式便流行了起来。本文主要记录 HEXO+Git+Node 的方式来搭建个人博客。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h4 id="环境需求-amp-配置文件"><a href="#环境需求-amp-配置文件" class="headerlink" title="环境需求&amp;配置文件"></a>环境需求&amp;配置文件</h4><h5 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h5><ul>
+<li>git</li>
+<li>node.js</li>
+<li>hexo</li>
+</ul>
+<p><em>　　</em>上述三个环境具体的安装详情步骤请Google一下，不再赘述；<br><em>　　</em><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">HEXO官网帮助链接</a><br><em>　　</em><a href="https://pages.github.com/" target="_blank" rel="noopener">Github官网帮助链接</a><br><em>　　</em>注意点：github仓库在新建的时候，命名规范需要遵循：账户名.github.io 的原则，否则指定将会无效；   </p>
+<h5 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h5><h6 id="博客配置文件："><a href="#博客配置文件：" class="headerlink" title="博客配置文件："></a>博客配置文件：</h6><p><em>　　</em>打开博客安装的路径，找到配置文件_config.yml ,更换信息。<br>ep:<br><em>　　</em>title：博客标题<br><em>　　</em>author:作者<br><em>　　</em>type：Git<br><em>　　</em>repository:git地址 等等</p>
+<h6 id="主题配置文件："><a href="#主题配置文件：" class="headerlink" title="主题配置文件："></a>主题配置文件：</h6><p><em>　　</em>更换自己想要的博客主题，更改主题文件里面的_config.yml，根据需要进行设置；</p>
+<h6 id="另："><a href="#另：" class="headerlink" title="另："></a>另：</h6><p><em>　　</em>如果需要绑定域名，则需要再hexo的文件夹下面新建CNAME文件，并且写入域名再将域名的dns解析增加两条记录，解析到github服务器192.30.252.153和192.30.252.154</p>
+<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>打开终端cd到hexo文件下，执行命令<br><em>　　</em><code>hexo new &quot;文件名&quot;</code><br>后会在source-&gt;_posts文件下生成对应的文件，使用markdown编辑器编译文件<br><em>　　</em>执行<code>hexo generate</code>可以简写为<code>hexo g</code> 生成静态文件<br><em>　　</em>执行<code>hexo deploy</code>简写为<code>hexo d</code> 文件提交到git<br>以上操作完成后 即可在浏览器中输入对应的博客地址进行访问  </p>
+<h6 id="Tips-先预览后提交"><a href="#Tips-先预览后提交" class="headerlink" title="Tips:先预览后提交"></a>Tips:先预览后提交</h6><p>使用命令<code>hexo server</code> 简写<code>hexo s</code>启动本地预览，访问本地地址//0.0.0.0:4000/ 查看效果即可！</p>
+<p><em>　　</em>以上。</p>
+
   </section>
 
 </article>
