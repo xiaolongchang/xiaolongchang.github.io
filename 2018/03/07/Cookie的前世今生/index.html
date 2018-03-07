@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="z">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>Cookie的前世今生 | Jerry&#39;s Blog</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="千里之行始于足下">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cookie的前世今生 | Jerry&#39;s Blog">
+    <meta name="twitter:description" content="千里之行始于足下">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cookie的前世今生 | Jerry&#39;s Blog">
+    <meta property="og:description" content="千里之行始于足下">
+
+    
+    <meta name="author" content="Jerry Chang">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/avatar-small.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+
+    <link rel="canonical" href="http://yoursite.com/2018/03/07/Cookie的前世今生/"/>
+
+                 
+</head>
+
+<body class="home-template no-js">
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 Jerry&#39;s Blog 的主页"><img src="/images/avatar.jpg" width="80" alt="Jerry&#39;s Blog logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for Jerry&#39;s Blog">Jerry&#39;s Blog</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">千里之行始于足下</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">归档</a></li>
+            
+              <li class="navigation__item"><a href="/categories/codeNote">技术随笔</a></li>
+            
+              <li class="navigation__item"><a href="/categories/lifeNote">生活记事</a></li>
+            
+              <li class="navigation__item"><a href="/categories/bookNote">读书感悟</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="https://weibo.com/5251143378" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/xiaolongchang" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  <li class="navigation__item">
+    <a href="https://twitter.com/chang617663060" title="上Twitter找我" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+
+  
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-green"></div>
+  </div> 
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2018-03-07T06:53:22.000Z" class="post-list__meta--date date">2018-03-07</time> &#8226; <span class="post-meta__tags tags">于 
+  <a class="tag-link" href="/tags/NewTechnology/">NewTechnology</a>
+ </span>
+      <span class="page-pv">
+       阅读 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">Cookie的前世今生</h1>
+  </header>
+
+  <section class="post">
+    <h2 id="前世"><a href="#前世" class="headerlink" title="前世"></a>前世</h2><h4 id="应运而生"><a href="#应运而生" class="headerlink" title="应运而生"></a>应运而生</h4><p><em>　　</em>由于http是一种<strong>无状态</strong>的协议，顾名思义就是在数据交换完毕后，服务器和客户端就会关闭连接。服务器并不知道谁进行了“数据操作”，当客户端再次和服务器连接的时候上次的“数据操作”也无法获取到。于是Session与Cookie便出现了；<br><em>　　**</em>Session(会话)<strong>跟踪是Web程序中常用的技术，用来跟踪用户的整个会话。</strong>Cookie**是通过在客户端记录信息确定用户身份，Session通过在服务器端记录信息确定用户身份。</p>
+<h4 id="释义"><a href="#释义" class="headerlink" title="释义"></a>释义</h4><p><em>　　</em>Cookie-“甜饼”，是由W3C组织提出，最早由Netscape社区发展的一种机制。目前Cookie已经成为标准，所有的主流浏览器如IE、Netscape、Firefox、Opera等都支持Cookie。<br><em>　　</em>服务器单从网络连接上无从知道客户身份。于是，就给客户端们颁发一个通行证吧，每人一个，无论谁访问都必须携带自己通行证。这样服务器就能从通行证上确认客户身份了。<br><em>　　</em>Cookie实际上是一小段的文本信息。客户端请求服务器，如果服务器需要记录该用户状态，就向客户端浏览器颁发一个Cookie。客户端浏览器会把Cookie保存起来。当浏览器再请求该网站时，浏览器把请求的网址连同该Cookie一同提交给服务器。服务器检查该Cookie，以此来辨认用户状态。   </p>
+<h2 id="今生"><a href="#今生" class="headerlink" title="今生"></a>今生</h2><h4 id="iOS中cookie的常用属性"><a href="#iOS中cookie的常用属性" class="headerlink" title="iOS中cookie的常用属性"></a>iOS中cookie的常用属性</h4><table>
+<thead>
+<tr>
+<th>properties</th>
+<th>NS</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>NSHTTPCookieName</td>
+<td>该Cookie的名称，Cookie一旦创建，名称便不可更改  </td>
+</tr>
+<tr>
+<td>value</td>
+<td>NSHTTPCookieValue</td>
+<td>该Cookie的值  </td>
+</tr>
+<tr>
+<td>version</td>
+<td>NSHTTPCookieVersion</td>
+<td>该Cookie使用的版本号</td>
+</tr>
+<tr>
+<td>expiresDate</td>
+<td>NSHTTPCookieExpires</td>
+<td>该Cookie失效的时间，单位秒</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>NSHTTPCookieDomain</td>
+<td>可以访问该Cookie的域名。如果设置为“.baidu.com”，则所有以“baidu.com”结尾的域名都可以访问该Cookie。注意第一个字符必须为“.”</td>
+</tr>
+<tr>
+<td>path</td>
+<td>NSHTTPCookiePath</td>
+<td>该Cookie的使用路径。如果设置为“/abc/”，则只有contextPath为“/abc”的程序可以访问该Cookie。如果设置为“/”，则本域名下contextPath都可以访问该Cookie。注意最后一个字符必须为“/”</td>
+</tr>
+<tr>
+<td>..</td>
+<td></td>
+<td>..  </td>
+</tr>
+</tbody>
+</table>
+<h4 id="iOS中的cookie操作"><a href="#iOS中的cookie操作" class="headerlink" title="iOS中的cookie操作"></a>iOS中的cookie操作</h4><p><em>　　</em>一般在移动端处理阶段是在登录完成后，在服务端获取到的某个参数，如：用户ID或者用户token存储在本地后写入cookie，设定cookie的上述参数，名称，域名，失效等。在用户注销账号，或者失效性过了以后会移除该cookie；在此操作过程中需要用到一个类<strong>NSHTTPCookieStorage</strong>，是一个单利来管理cookie；具体请看官方文档。</p>
+<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><hr>
+<p><em>　　</em>在计算机科学领域来说，尤其是在网络领域，会话（session）是一种持久网络协议，在用户（或用户代理）端和服务器端之间创建关联，从而起到交换数据包的作用机制，session在网络协议（例如telnet或FTP）中是非常重要的部分。<br><em>　　</em>在不包含会话层（例如UDP）或者是无法长时间驻留会话层（例如HTTP）的传输协议中，会话的维持需要依靠在传输数据中的高级别程序。例如，在浏览器和远程主机之间的HTTP传输中，HTTP cookie就会被用来包含一些相关的信息，例如session ID，参数和权限信息等。<br><em>　　</em>上述来个维基百科，之所以用这个关于session的存储分为好多个形式，可以依赖于cookie存储id在服务器上取出，可以完全在客户端存储，可以完全在服务端存储。多种方式没有争辩的意义，较为广泛的是依赖于cookie的方式，成本低！</p>
+<p><em>　　</em> 未完待续……</p>
+
+  </section>
+
+</article>
+
+<section class="read-more">
+           
+    
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2018/03/05/读一本书/" title="读一本书">读一本书</a></h2>
+                <p class="excerpt">
+                
+                
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2018-03-05T07:16:41.000Z" class="post-list__meta--date date">2018-03-05</time> &#8226; <span class="post-list__meta--tags tags">于 
+  <a class="tag-link" href="/tags/读书感悟/">读书感悟</a>
+</span><a class="btn-border-small" href="/2018/03/05/读一本书/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+  
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        &copy; 2018 Jerry Chang - 本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+       
+    </span>
+    <span class="footer__copyright">
+             - 基于 <a href="http://hexo.io">Hexo</a> 搭建，使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">new-vno</a> 主题,修改自<a href="https://monniya.com ">@Monniya</a> <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+         </span>
+       
+    
+    
+</footer>
+
+
+        </div>
+    </div>
+
+     
+    
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    
+</body>
+</html>
