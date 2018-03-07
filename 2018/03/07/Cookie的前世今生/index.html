@@ -162,51 +162,51 @@
 <thead>
 <tr>
 <th>properties</th>
-<th>NS</th>
-<th>描述</th>
+<th style="text-align:left">NS</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>name</td>
-<td>NSHTTPCookieName</td>
-<td>该Cookie的名称，Cookie一旦创建，名称便不可更改  </td>
+<td style="text-align:left">NSHTTPCookieName</td>
+<td style="text-align:left">该Cookie的名称，Cookie一旦创建，名称便不可更改</td>
 </tr>
 <tr>
 <td>value</td>
-<td>NSHTTPCookieValue</td>
-<td>该Cookie的值  </td>
+<td style="text-align:left">NSHTTPCookieValue</td>
+<td style="text-align:left">该Cookie的值</td>
 </tr>
 <tr>
 <td>version</td>
-<td>NSHTTPCookieVersion</td>
-<td>该Cookie使用的版本号</td>
+<td style="text-align:left">NSHTTPCookieVersion</td>
+<td style="text-align:left">该Cookie使用的版本号</td>
 </tr>
 <tr>
 <td>expiresDate</td>
-<td>NSHTTPCookieExpires</td>
-<td>该Cookie失效的时间，单位秒</td>
+<td style="text-align:left">NSHTTPCookieExpires</td>
+<td style="text-align:left">该Cookie失效的时间，单位秒</td>
 </tr>
 <tr>
 <td>domain</td>
-<td>NSHTTPCookieDomain</td>
-<td>可以访问该Cookie的域名。如果设置为“.baidu.com”，则所有以“baidu.com”结尾的域名都可以访问该Cookie。注意第一个字符必须为“.”</td>
+<td style="text-align:left">NSHTTPCookieDomain</td>
+<td style="text-align:left">可以访问该Cookie的域名。如果设置为“.baidu.com”，则所有以“baidu.com”结尾的域名都可以访问该Cookie。注意第一个字符必须为“.”</td>
 </tr>
 <tr>
 <td>path</td>
-<td>NSHTTPCookiePath</td>
-<td>该Cookie的使用路径。如果设置为“/abc/”，则只有contextPath为“/abc”的程序可以访问该Cookie。如果设置为“/”，则本域名下contextPath都可以访问该Cookie。注意最后一个字符必须为“/”</td>
+<td style="text-align:left">NSHTTPCookiePath</td>
+<td style="text-align:left">该Cookie的使用路径。如果设置为“/abc/”，则只有contextPath为“/abc”的程序可以访问该Cookie。如果设置为“/”，则本域名下contextPath都可以访问该Cookie。注意最后一个字符必须为“/”</td>
 </tr>
 <tr>
 <td>..</td>
-<td></td>
-<td>..  </td>
+<td style="text-align:left">..</td>
+<td style="text-align:left">..</td>
 </tr>
 </tbody>
 </table>
 <h4 id="iOS中的cookie操作"><a href="#iOS中的cookie操作" class="headerlink" title="iOS中的cookie操作"></a>iOS中的cookie操作</h4><p><em>　　</em>一般在移动端处理阶段是在登录完成后，在服务端获取到的某个参数，如：用户ID或者用户token存储在本地后写入cookie，设定cookie的上述参数，名称，域名，失效等。在用户注销账号，或者失效性过了以后会移除该cookie；在此操作过程中需要用到一个类<strong>NSHTTPCookieStorage</strong>，是一个单利来管理cookie；具体请看官方文档。</p>
 <h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><hr>
-<p><em>　　</em>在计算机科学领域来说，尤其是在网络领域，会话（session）是一种持久网络协议，在用户（或用户代理）端和服务器端之间创建关联，从而起到交换数据包的作用机制，session在网络协议（例如telnet或FTP）中是非常重要的部分。<br><em>　　</em>在不包含会话层（例如UDP）或者是无法长时间驻留会话层（例如HTTP）的传输协议中，会话的维持需要依靠在传输数据中的高级别程序。例如，在浏览器和远程主机之间的HTTP传输中，HTTP cookie就会被用来包含一些相关的信息，例如session ID，参数和权限信息等。<br><em>　　</em>上述来个维基百科，之所以用这个关于session的存储分为好多个形式，可以依赖于cookie存储id在服务器上取出，可以完全在客户端存储，可以完全在服务端存储。多种方式没有争辩的意义，较为广泛的是依赖于cookie的方式，成本低！</p>
+<p><em>　　</em>在计算机科学领域来说，尤其是在网络领域，会话（session）是一种持久网络协议，在用户（或用户代理）端和服务器端之间创建关联，从而起到交换数据包的作用机制，session在网络协议（例如telnet或FTP）中是非常重要的部分。<br><em>　　</em>在不包含会话层（例如UDP）或者是无法长时间驻留会话层（例如HTTP）的传输协议中，会话的维持需要依靠在传输数据中的高级别程序。例如，在浏览器和远程主机之间的HTTP传输中，HTTP cookie就会被用来包含一些相关的信息，例如session ID，参数和权限信息等。<br><em>　　</em>上述引用自维基百科，之所以用这个关于session的存储分为好多个形式，可以依赖于cookie存储id在服务器上取出，可以完全在客户端存储，可以完全在服务端存储。多种方式没有争辩的意义，较为广泛的是依赖于cookie的方式，成本低！</p>
 <p><em>　　</em> 未完待续……</p>
 
   </section>
