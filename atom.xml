@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jerry&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-03-08T06:18:50.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Jerry Chang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cookie的前世今生</title>
+    <link href="http://yoursite.com/2018/03/07/Cookie%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/"/>
+    <id>http://yoursite.com/2018/03/07/Cookie的前世今生/</id>
+    <published>2018-03-07T06:53:22.000Z</published>
+    <updated>2018-03-08T06:18:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前世"><a href="#前世" class="headerlink" title="前世"></a>前世</h2><h4 id="应运而生"><a href="#应运而生" class="headerlink" title="应运而生"></a>应运而生</h4><p><em>　　</em>由于http是一种<strong>无状态</strong>的协议，顾名思义就是在数据交换完毕后，服务器和客户端就会关闭连接。服务器并不知道谁进行了“数据操作”，当客户端再次和服务器连接的时候上次的“数据操作”也无法获取到。于是Session与Cookie便出现了；<br><em>　　**</em>Session(会话)<strong>跟踪是Web程序中常用的技术，用来跟踪用户的整个会话。</strong>Cookie**是通过在客户端记录信息确定用户身份，Session通过在服务器端记录信息确定用户身份。</p><h4 id="释义"><a href="#释义" class="headerlink" title="释义"></a>释义</h4><p><em>　　</em>Cookie-“甜饼”，是由W3C组织提出，最早由Netscape社区发展的一种机制。目前Cookie已经成为标准，所有的主流浏览器如IE、Netscape、Firefox、Opera等都支持Cookie。<br><em>　　</em>服务器单从网络连接上无从知道客户身份。于是，就给客户端们颁发一个通行证吧，每人一个，无论谁访问都必须携带自己通行证。这样服务器就能从通行证上确认客户身份了。<br><em>　　</em>Cookie实际上是一小段的文本信息。客户端请求服务器，如果服务器需要记录该用户状态，就向客户端浏览器颁发一个Cookie。客户端浏览器会把Cookie保存起来。当浏览器再请求该网站时，浏览器把请求的网址连同该Cookie一同提交给服务器。服务器检查该Cookie，以此来辨认用户状态。   </p><h2 id="今生"><a href="#今生" class="headerlink" title="今生"></a>今生</h2><h4 id="iOS中cookie的常用属性"><a href="#iOS中cookie的常用属性" class="headerlink" title="iOS中cookie的常用属性"></a>iOS中cookie的常用属性</h4><table><thead><tr><th>properties</th><th style="text-align:left">NS</th><th style="text-align:left">描述</th></tr></thead><tbody><tr><td>name</td><td style="text-align:left">NSHTTPCookieName</td><td style="text-align:left">该Cookie的名称，Cookie一旦创建，名称便不可更改</td></tr><tr><td>value</td><td style="text-align:left">NSHTTPCookieValue</td><td style="text-align:left">该Cookie的值</td></tr><tr><td>version</td><td style="text-align:left">NSHTTPCookieVersion</td><td style="text-align:left">该Cookie使用的版本号</td></tr><tr><td>expiresDate</td><td style="text-align:left">NSHTTPCookieExpires</td><td style="text-align:left">该Cookie失效的时间，单位秒</td></tr><tr><td>domain</td><td style="text-align:left">NSHTTPCookieDomain</td><td style="text-align:left">可以访问该Cookie的域名。如果设置为“.baidu.com”，则所有以“baidu.com”结尾的域名都可以访问该Cookie。注意第一个字符必须为“.”</td></tr><tr><td>path</td><td style="text-align:left">NSHTTPCookiePath</td><td style="text-align:left">该Cookie的使用路径。如果设置为“/abc/”，则只有contextPath为“/abc”的程序可以访问该Cookie。如果设置为“/”，则本域名下contextPath都可以访问该Cookie。注意最后一个字符必须为“/”</td></tr><tr><td>..</td><td style="text-align:left">..</td><td style="text-align:left">..</td></tr></tbody></table><h4 id="iOS中的cookie操作"><a href="#iOS中的cookie操作" class="headerlink" title="iOS中的cookie操作"></a>iOS中的cookie操作</h4><p><em>　　</em>一般在移动端处理阶段是在登录完成后，在服务端获取到的某个参数，如：用户ID或者用户token存储在本地后写入cookie，设定cookie的上述参数，名称，域名，失效等。在用户注销账号，或者失效性过了以后会移除该cookie；在此操作过程中需要用到一个类<strong>NSHTTPCookieStorage</strong>，是一个单利来管理cookie；具体请看官方文档。</p><h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><hr><p><em>　　</em>在计算机科学领域来说，尤其是在网络领域，会话（session）是一种持久网络协议，在用户（或用户代理）端和服务器端之间创建关联，从而起到交换数据包的作用机制，session在网络协议（例如telnet或FTP）中是非常重要的部分。<br><em>　　</em>在不包含会话层（例如UDP）或者是无法长时间驻留会话层（例如HTTP）的传输协议中，会话的维持需要依靠在传输数据中的高级别程序。例如，在浏览器和远程主机之间的HTTP传输中，HTTP cookie就会被用来包含一些相关的信息，例如session ID，参数和权限信息等。<br><em>　　</em>上述引用自维基百科，之所以用这个关于session的存储分为好多个形式，可以依赖于cookie存储id在服务器上取出，可以完全在客户端存储，可以完全在服务端存储。多种方式没有争辩的意义，较为广泛的是依赖于cookie的方式，成本低！</p><p><em>　　</em> 未完待续……</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前世&quot;&gt;&lt;a href=&quot;#前世&quot; class=&quot;headerlink&quot; title=&quot;前世&quot;&gt;&lt;/a&gt;前世&lt;/h2&gt;&lt;h4 id=&quot;应运而生&quot;&gt;&lt;a href=&quot;#应运而生&quot; class=&quot;headerlink&quot; title=&quot;应运而生&quot;&gt;&lt;/a&gt;应运而生&lt;/h
+      
+    
+    </summary>
+    
+      <category term="技术随笔" scheme="http://yoursite.com/categories/codeNote/"/>
+    
+    
+      <category term="NewTechnology" scheme="http://yoursite.com/tags/NewTechnology/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>读一本书</title>
+    <link href="http://yoursite.com/2018/03/05/%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/"/>
+    <id>http://yoursite.com/2018/03/05/读一本书/</id>
+    <published>2018-03-05T07:16:41.000Z</published>
+    <updated>2018-03-05T07:17:12.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="bookNote" scheme="http://yoursite.com/categories/bookNote/"/>
+    
+    
+      <category term="读书感悟" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>北京的天气</title>
+    <link href="http://yoursite.com/2018/03/05/%E5%8C%97%E4%BA%AC%E7%9A%84%E5%A4%A9%E6%B0%94/"/>
+    <id>http://yoursite.com/2018/03/05/北京的天气/</id>
+    <published>2018-03-05T07:00:00.000Z</published>
+    <updated>2018-03-05T07:11:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>渐离干冷大风的北京，终于迎来初春的气息;  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;渐离干冷大风的北京，终于迎来初春的气息;  &lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="lifeNote" scheme="http://yoursite.com/categories/lifeNote/"/>
+    
+    
+      <category term="生活牢骚" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB%E7%89%A2%E9%AA%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人博客搭建流程</title>
+    <link href="http://yoursite.com/2018/03/05/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/"/>
+    <id>http://yoursite.com/2018/03/05/个人博客搭建流程/</id>
+    <published>2018-03-05T06:13:31.000Z</published>
+    <updated>2018-03-05T09:57:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><em>　　</em>在数据汹涌的当今时代，作为一只🐒，有一个属于自己的地方，可以让你随便写点什么，或者记点什么，便是件很令人愉快的事情；<br><em>　　</em>简单容易的第三方类博客平台由于自我的局限性，虽为主流，却不是主导。于是乎自己搭建博客的方式便流行了起来。本文主要记录 HEXO+Git+Node 的方式来搭建个人博客。</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h4 id="环境需求-amp-配置文件"><a href="#环境需求-amp-配置文件" class="headerlink" title="环境需求&amp;配置文件"></a>环境需求&amp;配置文件</h4><h5 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h5><ul><li>git</li><li>node.js</li><li>hexo</li></ul><p><em>　　</em>上述三个环境具体的安装详情步骤请Google一下，不再赘述；<br><em>　　</em><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">HEXO官网帮助链接</a><br><em>　　</em><a href="https://pages.github.com/" target="_blank" rel="noopener">Github官网帮助链接</a><br><em>　　</em>注意点：github仓库在新建的时候，命名规范需要遵循：账户名.github.io 的原则，否则指定将会无效；   </p><h5 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h5><h6 id="博客配置文件："><a href="#博客配置文件：" class="headerlink" title="博客配置文件："></a>博客配置文件：</h6><p><em>　　</em>打开博客安装的路径，找到配置文件_config.yml ,更换信息。<br>ep:<br><em>　　</em>title：博客标题<br><em>　　</em>author:作者<br><em>　　</em>type：Git<br><em>　　</em>repository:git地址 等等</p><h6 id="主题配置文件："><a href="#主题配置文件：" class="headerlink" title="主题配置文件："></a>主题配置文件：</h6><p><em>　　</em>更换自己想要的博客主题，更改主题文件里面的_config.yml，根据需要进行设置；</p><h6 id="另："><a href="#另：" class="headerlink" title="另："></a>另：</h6><p><em>　　</em>如果需要绑定域名，则需要再hexo的文件夹下面新建CNAME文件，并且写入域名再将域名的dns解析增加两条记录，解析到github服务器192.30.252.153和192.30.252.154</p><h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>打开终端cd到hexo文件下，执行命令<br><em>　　</em><code>hexo new &quot;文件名&quot;</code><br>后会在source-&gt;_posts文件下生成对应的文件，使用markdown编辑器编译文件<br><em>　　</em>执行<code>hexo generate</code>可以简写为<code>hexo g</code> 生成静态文件<br><em>　　</em>执行<code>hexo deploy</code>简写为<code>hexo d</code> 文件提交到git<br>以上操作完成后 即可在浏览器中输入对应的博客地址进行访问  </p><h6 id="Tips-先预览后提交"><a href="#Tips-先预览后提交" class="headerlink" title="Tips:先预览后提交"></a>Tips:先预览后提交</h6><p>使用命令<code>hexo server</code> 简写<code>hexo s</code>启动本地预览，访问本地地址//0.0.0.0:4000/ 查看效果即可！</p><p><em>　　</em>以上。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;em&gt;　　&lt;/em&gt;在数据汹涌的当今时代，作为一只🐒，有一个属于自己的地方，可以让你随便写点什么，或者记点什么，便是件很令人愉快的事情；
+      
+    
+    </summary>
+    
+      <category term="技术随笔" scheme="http://yoursite.com/categories/codeNote/"/>
+    
+    
+      <category term="NewTechnology" scheme="http://yoursite.com/tags/NewTechnology/"/>
+    
+  </entry>
+  
+</feed>
